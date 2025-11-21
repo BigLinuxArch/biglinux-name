@@ -2,17 +2,17 @@
 
 pkgname=biglinux-name
 pkgdesc="Configure system name"
-# depends=('')
+depends=('pipewire')
 # makedepends=('')
 # conflicts=('')
-pkgver=$(date +%y.%m.%d)
-pkgrel=$(date +%H%M)
+pkgver=23.10.13
+pkgrel=0206
 epoch=1
 arch=('any')
 license=('GPL3')
 url="https://github.com/biglinux/$pkgname"
 provides=("$pkgname")
-source=("git+${url}.git")
+source=("git+${url}.git#branch=stable-2023-10-02")
 md5sums=('SKIP')
 if [ -e "${pkgname}.install" ];then
     install=${pkgname}.install
